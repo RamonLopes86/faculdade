@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAN DOM</title>
+</head>
+<body>
+
+    <h1>
+        Man o DOM - EXERCÍCIO
+    </h1>
+
+    <div class="estilo">
+
+        div com estilo
+
+    </div>
+    <br>
+    <div class="estilo">
+
+        div com estilo 2
+
+    </div>
+
+    <p class="estilo">elemento p com estilo</p>
+    <p>isso é <span class="estilo">elemento span</span>dentro do p</p>
+
+
+    <script>
+
+     const list = document.querySelectorAll('.estilo')
+
+        for(let i = 0 ; i< list.length ; i++){
+
+            list[i].style.color="white"
+            list[i].style.backgroundColor="blue"
+            list[i].style.display="inline-block"
+            list[i].innerText = list[i].innerText.toUpperCase()
+            
+            
+
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>

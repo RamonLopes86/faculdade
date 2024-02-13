@@ -11,22 +11,14 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        ::placeholder{
-            font-size: 12px;
-            text-align: center;
-            font-family: cursive,sans-serif;
-        }
+    
 
       
     </style>
 </head>
 <body>
 
-    <h1>SOMA E SUBITRAÇÃO</h1>
-
-  
-
-
+    <h1>Manip DOM</h1>
 
   
 
@@ -40,9 +32,9 @@
     </button>
 
 
-    <div id="res">
+    <div id="res" style="background-color: orange; height: 50px; width: 200px; margin-top: 10px;border-radius: 10px; " ;>
     
-        <!-- resultado -->
+      
 
     </div>
 
@@ -51,31 +43,29 @@
     
      <script>
 
-        let valor1 = Number(document.getElementById('idnum'))
-        let valor2 = Number(document.getElementById('idnum2'))
-        let calc = document.getElementById('res')
-
+       
         
-        let resultado2 = valor1 - valor2
-        let resultado = valor1+valor2
 
+         
+        
         function somar(){
 
     
-          calc.innerHTML = "<p> Deu ruim</p>"
-          calc.style.backgroundColor="red";
-          calc.style.opacity="50%";
-          calc.style.width="200px"
-          calc.style.transition="400ms"
+          res.innerHTML = "<p> Deu ruim</p>"
+          res.style.backgroundColor="red";
+          res.style.opacity="50%";
+          res.style.width="200px"
+          res.style.transition="400ms"
+          
           
 
         }
 
         function subtrair(){
 
-            calc.innerHTML = " " 
-            calc.style.backgroundColor="blue";
-            calc.style.transition="400ms"
+            res.innerHTML = " " 
+            res.style.backgroundColor="blue";
+            res.style.transition="400ms"
            
             
            
