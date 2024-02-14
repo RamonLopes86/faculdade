@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man DOM</title>
+
+   
+</head>
+<body>
+
+    <!-- exercico da faculdade inclusao de elemento dinamico no script -->
+    <h1 id="h1">
+        Man DOM - CRIANDO ELEMENTOS DINAMICOS 
+    </h1>
+
+        <ul id="lista">
+
+
+        </ul>
+
+        <ul id="lista2">
+
+
+        </ul>
+
+       <ul id="lista3">
+        
+       </ul>
+
+
+       <ul id="lista4">
+
+
+       </ul>
+
+       <div id="lista5">
+
+
+       </div>
+ 
+
+   
+    
+</body>
+
+<script>
+
+   
+
+    // uma das fomas é criando cada time de maneira indvidual
+
+    let h1 = document.getElementById('h1')
+    h1.style.marginLeft="20px"
+
+    let lista = document.getElementById('lista')
+    lista.style.backgroundColor="green"
+    lista.style.width="500px"
+    lista.style.height="600px"
+    lista.style.marginLeft="20px"
+    lista.style.opacity="60%"
+
+    let li = document.createElement('li')
+    li.textContent = "Bahia"
+    lista.appendChild(li)
+    li.style.border="1px solid blue"
+    li.style.width="100px"
+    li.style.padding="0px"
+   
+
+    let li2 = document.createElement('li')
+    li2.textContent = "Cruzeiro"
+    lista.appendChild(li2)
+    li2.style.paddingTop="5px"
+    li2.style.border="1px solid blue"
+    li2.style.width="100px"
+    li2.style.padding="0px"
+
+    let li3 = document.createElement('li')
+    li3.textContent = "Flamengo"
+    lista.appendChild(li3)
+    li3.style.paddingTop="5px"
+    li3.style.border="1px solid blue"
+    li3.style.width="100px"
+    li3.style.padding="0px"
+
+    // Aqui eu so configurei os afastamentos das margens de baixo da lista 
+
+    li.style.marginTop="5px"
+    li.style.marginBottom="5px"
+    li2.style.marginBottom="5px"
+    li3.style.marginBottom="5px"
+
+// outra forma é criando um array
+
+let times = ["bahia" , "vitoria" , "flamengo"]
+
+for(let c = 0 ; c<times.length ; c++){
+
+    let clube = times[c]
+    
+    let lista2 = document.getElementById('lista') //trouxe o id da ul
+    let li = document.createElement('li')
+    li.innerText = clube;
+    li.style.border="1px solid blue";
+    li.style.width="200px"
+    li.style.marginBottom="10px"
+    li.style.padding="5px"
+    lista2.appendChild(li)
+
+
+}
+
+    
+    let nomes = ["Ramon" , "Carina ", "Maria Helena", "Gael"]
+
+    for(let cont = 0;cont<nomes.length;cont++){
+        
+        let lista3  = document.getElementById('lista3')
+        let listaNomes = nomes[cont]
+        let li = document.createElement('li')
+        li.innerText = listaNomes
+        lista3.appendChild(li)
+
+
+
+    }
+
+
+    let doces = ["Brigadeiro", "beijinho" , "Casadinho"]
+
+    for(let v = 0 ; v<doces.length;v++){
+
+        let lista4 = document.getElementById('lista4')
+        let li = document.createElement('li')
+        li.innerText = doces[v]
+        lista4.appendChild(li)
+        
+    
+
+    }
+
+    for(let t = 0;t<doces.length;t++){
+
+        let div = document.getElementById("lista5")
+        let span = document.createElement('span')
+        span.innerText = doces[t]
+        div.appendChild(span)
+        div.style.padding="30px"
+        span.style.display="block" 
+
+      
+
+    }
+
+
+
+
+
+
+
+
+</script>
+  
+</html>

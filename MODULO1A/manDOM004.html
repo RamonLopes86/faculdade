@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEMENTO DINÂMICO</title>
+
+
+<body>
+
+    <h1>
+        Exercicio de elemento dinâmico ( man dom)
+    </h1>
+
+
+    <ul id="lista">
+
+        <li>Café</li>
+        <li>Pão</li>
+    
+    </ul>
+
+    <ul>
+
+        <li>Cafe</li>
+        <li>pao</li>
+        <li>leite</li>
+        <li>Abacaxi</li>
+
+        <ol>
+            <li>Novo</li>
+            <ul>
+                <li id="list">Tempero</li>
+            </ul>
+        </ol>
+    </ul>
+
+    
+
+    
+<!-- vamos utilizar o JS para criar uma div. ou seja , criar uma div diretamente com JS -->
+
+
+    
+</body>
+
+<script>
+
+    var elemento = document.createElement("div");
+    elemento.innerHTML = "<p> Meu Nome é Ramon </p>";
+    elemento.style.backgroundColor="blue";
+    document.body.append(elemento);
+    elemento.style.width="200px";
+    elemento.style.padding="10px"
+    elemento.style.textAlign="center"
+    elemento.style.color="white"
+
+    // ------------------------
+
+    let lista = document.getElementById("lista");
+    lista.style.listStyleType="circle"
+    let li = document.createElement('li');
+    li.textContent = "leite"
+    lista.appendChild(li)
+
+    let li2 = document.createElement('li');
+    li2.textContent = "Abacaxi";
+    lista.appendChild(li2)
+
+    let ol = document.createElement('ol')
+    ol.textContent = 'Novo'
+    lista.appendChild(ol)
+
+    let li3 = document.createElement('li')
+    li3.textContent = "dog"
+    lista.appendChild(li3)
+
+   
+
+   
+
+    
+
+
+
+
+</script>
+</html>
