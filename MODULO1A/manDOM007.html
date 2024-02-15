@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Eventos</title>
+  
+    <style>
+
+        .teste{
+
+            width: 400px;
+            height: 100px;
+            background-color: rgba(0, 0, 255, 0.63);
+        }
+    </style>
+
+   
+</head>
+
+<body>
+
+     <!--onclick - quanmdo eu clicar com o mouse  -->
+
+     <form action="">
+
+        <input onclick="clicar()" type="button" value="Apertar">
+
+        <input onclick="limpar()" type="button" value="Limpar">
+
+     </form>
+
+    
+        <div >
+            <p id="p">
+                TESTE DE EVENTO
+            </p>
+        </div>
+
+       <div class="teste" onmouseover="mouseCima()" onmouseout="mouseSai()">
+
+        <h2 id="titulo">
+
+        </h2>
+
+       </div>
+
+
+
+   
+
+    
+</body>
+
+<script>
+
+    let paragrafo = document.getElementById('p');
+    let h1 = document.getElementById('titulo')
+    paragrafo.style.display="none"
+   
+    
+
+    function clicar(){
+
+        p.style.display="block"
+        p.style.transition="400ms"
+    }
+
+    function limpar(){
+
+        p.style.display="none"
+    }
+
+
+   
+   
+
+    function mouseCima(){
+
+        h1.innerText = "mudei"
+
+        
+    }
+
+    function mouseSai(){
+
+        h1.innerHTML = "Passando o mouse por cima"
+    }
+   
+
+    
+ 
+
+</script>
+
+
+
+
+</html>

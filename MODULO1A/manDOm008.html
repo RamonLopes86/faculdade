@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        form{
+            
+            margin: 50px;
+        }
+
+        div{
+
+            display: block;
+            padding-bottom: 20px;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <form action="" method="get" autocomplete="off">
+
+        <div>
+            <label for="idmail">Mail :</label>
+            <input type="email" name="mail" id="idmail">
+        </div>
+
+        <div>
+            <label for="idname">Nome :</label>
+            <input type="text" name="name" id="idname">
+        </div>
+
+        <div>
+            <input onclick="novoItem()"  type="submit" value="ENVIAR">
+        </div>
+
+        
+
+    </form>
+  
+</body>
+
+    <script>
+
+        function novoItem(){
+
+            let campoNome = document.getElementById('idname')
+
+            alert("meu nome é " + campoNome.value)
+
+            if(campoNome.value === "Ramon"){
+
+            alert("Parabens")
+
+            }else{
+
+            alert("erro")
+
+            }
+    }
+
+        // NÃO ESQUECER DE COLOCAR O .VALUE PARA O JS BUSCAR A INFORMAÇÃO CONTIDA DENTRO DO INPUT
+
+    </script>
+
+
+</html>

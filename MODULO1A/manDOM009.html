@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man DOM - EVENTOS</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        form{
+            
+            margin: 50px;
+        }
+
+        div{
+
+            display: block;
+            padding-bottom: 20px;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="" method="get" autocomplete="off">
+
+        <div>
+            <label for="idmail">Mail :</label>
+            <input type="email" name="mail" id="idmail">
+        </div>
+
+        <div>
+            <label for="idname">Nome :</label>
+            <input type="text" name="name" id="idname">
+        </div>
+
+        <div>
+            <input onclick="campoVazio()" type="submit" value="ENVIAR">
+        </div>
+
+        
+
+    </form>
+
+    
+</body>
+
+    <script>
+
+      function campoVazio(){
+
+        let name = document.getElementById('idname') 
+        if(name.value == ""){
+
+            alert("vazio")
+        }else{
+            alert("ok , obrigado " + name.value)
+        }
+      }
+
+       
+
+
+    </script>
+</html>
