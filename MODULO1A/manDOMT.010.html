@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAN DOM</title>
+
+    <style>
+        .bloco, .botao{
+
+            margin-bottom: 5px;
+            padding: 20px 0px 0px 20px ;
+
+        }
+
+        fieldset{
+
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        #res{
+            width: 100px;
+            
+            background-color: rgba(255, 0, 0, 0.548);
+            margin-left: 20px;
+            margin-top: 10px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-family: cursive,sans-serif;
+            border-radius: 5px;
+            
+        }
+
+        .limpar , .botao {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+        <fieldset>
+
+              <legend>Calculadora</legend>  
+            <form action="" autocomplete="on">
+
+                <div class="bloco">
+                    <input type="number" name="num1" id="idnum1" placeholder="0 à 999" >
+                </div>
+                <div class="bloco">
+                    <input type="number" name="num2" id="idnum2" placeholder="0 à 999">
+                </div>
+        
+           
+        
+            </form>
+
+            <div id="res">
+
+
+            </div>
+
+            <div class="botao">
+
+                <input onclick="somar()"  type="button" value="Calcular">
+        
+            </div>
+
+            <div class="limpar">
+
+                <input type="reset" value="Limpar">
+
+            </div>
+
+            
+            
+
+
+        </fieldset>
+   
+
+    
+</body>
+
+        <script>
+
+           
+
+            function somar(){
+
+                let num1 = Number(document.getElementById('idnum1').value)
+                let num2 = Number( document.getElementById('idnum2').value)
+                let soma = num1 + num2
+                let res = document.getElementById('res')
+                
+
+                if(num1 == " " && num2 == " "){
+
+                    res.innerText = "preencha o campo"
+                }else {
+
+                    res.innerText = soma.toFixed(2)
+                }
+                
+
+            }
+
+
+            
+        </script>
+</html>
