@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treinando DOM</title>
+
+    <style>
+        p {
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    
-    <p id="paragrafo">
+
+    <main>
+
+        <p id="paragrafo">
+            Texto sem alterar
+
+
+        </p>
         
-    </p>
+        <div id="container">
+            
+        </div>
+    </main>
 
 
 
@@ -23,12 +40,78 @@
 </body>
 
 <script>
-    let paragrafo = document.getElementById('paragrafo')
 
-    paragrafo.innerHTML="OLA MUNDO"
-    paragrafo.style.color="blue"
-    paragrafo.style.fontFamily="cursive"
-    paragrafo.style.backgroundColor="gray"
-    paragrafo.style.display="inline-block"
+    let paragrafo = document.getElementById('paragrafo')
+    paragrafo.style.color = "blue"
+    paragrafo.style.fontFamily = "cursive"
+    paragrafo.style.backgroundColor = "gray"
+    paragrafo.style.display = "inline-block"
+    /*Criando um paragrafo no body*/
+    let novop = document.createElement('p')
+    novop.innerHTML = "<strong>ola ramon</strong>"
+    document.body.appendChild(novop)
+
+    /*criando um paragrafo utilizando o createTextNode*/
+
+    let p2 = document.createElement('p')
+    let texto = document.createTextNode("Mais um texto")
+    p2.appendChild(texto)
+    document.body.appendChild(p2)
+
+
+    /*criando um paragrafo em uma div especifica*/
+
+    let container = document.getElementById('container')
+    container.style.backgroundColor="gray"
+    container.style.height="100px"
+    container.style.width="200px"
+
+    let span = document.createElement('span')
+    let conteudo = document.createTextNode("dentro do elemento")
+    span.appendChild(conteudo)
+    span.style.textTransform="uppercase" /*para colocar o elemento em maiusculo*/
+    // conteudo.nodeValue = conteudo.nodeValue.toUpperCase() /*outra forma de colocar o elemento em maiusculo*/
+    container.appendChild(span)
+    container.style.textAlign="center"
+    
+   
+    
+
+
+
+
+
+
+    // paragrafo.addEventListener('click', clicou)
+    paragrafo.onclick = clicou;
+
+    function clicou() {
+
+        if (paragrafo.innerText == "Texto sem alterar") {
+
+            paragrafo.innerText = "fui clicado"
+            paragrafo.style.backgroundColor = "blue"
+            paragrafo.style.transitionProperty = "all"
+            paragrafo.style.transitionDuration = "1s"
+          
+            paragrafo.style.color = "white"
+            paragrafo.style.translate = "20px"
+            paragrafo.style.boxShadow = "5px 5px 5px black"
+        } else if (paragrafo.innerText == "fui clicado") {
+
+            paragrafo.innerText = "Texto sem alterar"
+            paragrafo.style.backgroundColor = "red"
+            paragrafo.style.transitionProperty = "all"
+            paragrafo.style.transitionDuration = "1s"
+            paragrafo.style.translate = "0px"
+            paragrafo.style.color = "white"
+            paragrafo.style.boxShadow = "none"
+        }
+
+    }
+
+
+
 </script>
+
 </html>
