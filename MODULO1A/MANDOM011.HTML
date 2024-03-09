@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento MANDOM</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+
+            width: 200px;
+            height: 200px;
+            border: 6px solid rgba(0, 0, 0, 0.384);
+            margin: 20px;
+            position: relative;
+
+
+
+        }
+
+        div img {
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            
+
+
+        }
+
+
+        input {
+            font-size: 18px;
+            width: 200px;
+            padding: 10px;
+            margin: 0px 20px;
+            border: none;
+            background-color: rgba(128, 128, 128, 0.493);
+            transition-property: transform, font-weight, text-decoration, box-shadow;
+            transition-duration: 200ms, 0s, 800ms, 200ms;
+
+
+        }
+
+        .borda-colorida {
+
+            
+            transition-property:all;
+            transition-duration: 400ms;
+            border-top: 6px solid blue;
+            border-left:6px solid red;
+            border-right:6px solid blue;
+            border-bottom:6px solid red;
+
+        }
+
+        .borda-colorida2{
+
+            transition-property:all;
+            transition-duration: 400ms;
+            border-top: 6px solid rgb(0, 255, 106);
+            border-left:6px solid rgb(212, 0, 255);
+            border-right:6px solid green;
+            border-bottom:6px solid rgb(255, 0, 255);
+
+        }
+
+        input:hover {
+
+            font-weight: bold;
+            background-color: rgba(5, 164, 238, 0.507);
+            transform: translateX(5px);
+            box-shadow: 6px 5px 5px rgba(128, 128, 128, 0.575);
+            cursor: pointer;
+        }
+
+      
+
+       
+    </style>
+
+</head>
+
+<body>
+
+    <div id="idborda-colorida">
+        <img id="imagem1" class="imagem1" src="image/minions.jpg" alt="imagem de minioms">
+        <img id="imagem2" class="imagem2" src="image/carro-removebg-preview.png" alt="imagem do carro">
+
+    </div>
+
+    <input id="botao" type="button" value="clique">
+
+
+    <script>
+
+
+        let botao = document.getElementById('botao')
+        let borda = document.getElementById('idborda-colorida')
+        let imagem = document.getElementById('imagem1')
+        let imagem2 = document.getElementById('imagem2')
+         imagem.style.opacity = "1"
+        imagem2.style.opacity = "0"
+        imagem.style.transition = "1s"
+        imagem2.style.transition = "1s"
+        borda.classList.add('borda-colorida')
+       
+
+        
+
+
+
+        botao.addEventListener('click', clicar)
+
+
+        function clicar() {
+
+            if (imagem.style.opacity == '1' && imagem2.style.opacity == "0") {
+
+                imagem.style.opacity = "0"
+                imagem2.style.opacity = "1"
+                // borda.classList.add('borda-colorida')
+
+
+
+
+
+
+
+            } else if (imagem.style.opacity == "0" && imagem2.style.opacity == "1") {
+
+                imagem.style.opacity = "1"
+                imagem2.style.opacity = "0"
+                // borda.classList.add('borda-colorida2')
+
+
+            }
+
+            if(borda.classList.contains('borda-colorida')){
+
+                borda.classList.remove('borda-colorida')
+                borda.classList.add('borda-colorida2')
+            }else if(borda.classList.contains('borda-colorida2')){
+
+                borda.classList.remove('borda-colorida2')
+                borda.classList.add('borda-colorida')
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
